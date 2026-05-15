@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "C++ Build (MSYS2)",
+            "type": "shell",
+            "command": "C:\\msys64\\usr\\bin\\bash.exe",
+            "args": [
+                "-lc",
+                "cd /c/Users/Konstantin/Documents/CodeForces/1700 && g++ -std=gnu++17 -O2 2215_A_Interval_Mod.cpp -o 2215_A_Interval_Mod.exe"
+            ],
+            "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
