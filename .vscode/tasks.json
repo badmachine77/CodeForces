@@ -7,7 +7,7 @@
             "command": "C:\\msys64\\usr\\bin\\bash.exe",
             "args": [
                 "-lc",
-                "cd /c/Users/Konstantin/Documents/CodeForces/2000 && g++ -std=gnu++17 -O2 2217_E_Definitely_Larger.cpp -o 2217_E_Definitely_Larger.exe"
+                "cd /c/Users/Konstantin/Documents/CodeForces/2200 && g++ -std=gnu++17 -O2 2209_E_A_Trivial_String_Problem.cpp -o 2209_E_A_Trivial_String_Problem.exe"
             ],
             "problemMatcher": ["$gcc"],
             "group": {
