@@ -1,9 +1,12 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+typedef unsigned long long ull;
 typedef long long ll;
 
 const ll mod197 = 1e9 + 7;
+
+vector<ll> fact;
 
 ll fastpow(ll number,ll power,ll mod){
     ll answer = 1;
@@ -17,6 +20,22 @@ ll fastpow(ll number,ll power,ll mod){
     }
 
     return answer;
+}
+
+void init_fact(ll n, ll mod){
+    fact = vector<ll>(n+1);
+
+    fact[0]=1;
+    for(ll i=1;i<=n;++i){
+        fact[i] = (fact[i-1]*i)%mod;
+    }
+}
+
+ll C(ll from,ll take, ll mod){
+    ll res = fact[from];
+    res = (res*fastpow(fact[take],mod-2,mod))%mod;
+    res = (res*fastpow(fact[from-take],mod-2,mod))%mod;
+    return res;
 }
 
 void solve(){
