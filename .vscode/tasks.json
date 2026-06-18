@@ -7,7 +7,7 @@
             "command": "C:\\msys64\\usr\\bin\\bash.exe",
             "args": [
                 "-lc",
-                "cd /c/Users/Konstantin/Documents/CodeForces/2400 && g++ -std=gnu++17 -O2 2211_F_Learning_Binary_Search.cpp -o 2211_F_Learning_Binary_Search.exe"
+                "cd /c/Users/Konstantin/Documents/CodeForces/contests/round_1104 && g++ -std=gnu++17 -O2 D.cpp -o D.exe"
             ],
             "problemMatcher": ["$gcc"],
             "group": {
