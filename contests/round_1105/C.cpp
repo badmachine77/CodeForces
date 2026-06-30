@@ -1,15 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-#pragma GCC optimize("O3")
-#pragma GCC optimize("unroll-loops")
-#pragma GCC target("avx2")
-
 typedef unsigned long long ull;
 typedef long long ll;
-typedef unsigned int ui;
 
 const ll mod197 = 1e9 + 7;
+const ll mod99 = 998244353;
 
 vector<ll> fact;
 
@@ -43,15 +39,37 @@ ll C(ll from,ll take, ll mod){
     return res;
 }
 
+ll a[1001000];
+ll n;
+
 void solve(){
-    
+    ll mm = 0;
+
+    cin>>n;
+    for(ll i=1;i<=n;++i){
+        cin>>a[i];
+        mm = mm^a[i];
+    }
+
+    if(n==1){
+        cout<<"0"<<endl;
+        return ;
+    }
+
+    if(mm==0){
+        cout<<"1"<<endl;
+        return ;
+    }
+
+    ll res=0;
+    for(ll i=1;i<=n;++i){
+        if((mm^a[i])<=a[i])++res;
+    }
+
+    cout<<res<<endl;
 }
 
 int main(){
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    cout.tie(nullptr);
-
     ll t;
     cin>>t;
     while(t--){

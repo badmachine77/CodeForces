@@ -1,13 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-#pragma GCC optimize("O3")
-#pragma GCC optimize("unroll-loops")
-#pragma GCC target("avx2")
-
 typedef unsigned long long ull;
 typedef long long ll;
-typedef unsigned int ui;
 
 const ll mod197 = 1e9 + 7;
 
@@ -43,15 +38,34 @@ ll C(ll from,ll take, ll mod){
     return res;
 }
 
+ll n;
+ll a[200200];
+ll b[200200];
 void solve(){
-    
+    cin>>n;
+    for(ll i=1;i<=n;++i){
+        cin>>a[i];
+    }
+    for(ll i=1;i<=n;++i){
+        cin>>b[i];
+    }
+
+    for(ll i=n;i>0;--i){
+        if(a[i]<b[i])continue;
+        if(a[i]>b[i]){
+            a[i-1]+=a[i]-b[i];
+        }
+    }
+
+    if(a[1]>b[1]){
+        cout<<"NO"<<endl;
+    }
+    else {
+        cout<<"YES"<<endl;
+    }
 }
 
 int main(){
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    cout.tie(nullptr);
-
     ll t;
     cin>>t;
     while(t--){

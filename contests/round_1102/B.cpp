@@ -1,13 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-#pragma GCC optimize("O3")
-#pragma GCC optimize("unroll-loops")
-#pragma GCC target("avx2")
-
 typedef unsigned long long ull;
 typedef long long ll;
-typedef unsigned int ui;
 
 const ll mod197 = 1e9 + 7;
 
@@ -44,14 +39,24 @@ ll C(ll from,ll take, ll mod){
 }
 
 void solve(){
-    
+    ull n;
+    cin>>n;
+    ll a,b;
+
+    if(n%12<10)a=n%12;
+    if(n%12==10)a=22;
+    if(n%12==11)a=11;
+
+    b=n-a;
+
+    if(a<0 || b<0){
+        cout<<"-1"<<endl;
+        return ;
+    }
+    cout<<a<<" "<<b<<endl;
 }
 
 int main(){
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
-    cout.tie(nullptr);
-
     ll t;
     cin>>t;
     while(t--){
